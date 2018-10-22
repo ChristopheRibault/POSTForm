@@ -5,8 +5,8 @@ class App extends Component {
     super(props);
     this.state = {
       name: '',
-      url: '',
-      comm: '(pourquoi tu aimes ce film? qu\'est ce qui t\'a marqué? etc...)'
+      poster: '',
+      comment: '(pourquoi tu aimes ce film? qu\'est ce qui t\'a marqué? etc...)'
     }
 
     this.onChange = this.onChange.bind(this);
@@ -51,12 +51,12 @@ class App extends Component {
             <input onChange={this.onChange} value={this.state.name} type='text' id= 'name' name='name' />
           </label><br/>
           
-          <label htmlFor='url'>URL du poster : 
-            <input onChange={this.onChange} value={this.state.url} type='text' id='url' name='url' />
+          <label htmlFor='poster'>URL du poster : 
+            <input onChange={this.onChange} value={this.state.poster} type='text' id='poster' name='poster' />
           </label><br/>
           
-          <label htmlFor='comm'>Commentaire :</label>
-          <textarea onChange={this.onChange} id='comm' name='comm' rows='10' cols='50' value={this.state.comm}></textarea><br/>
+          <label htmlFor='comment'>Commentaire :</label>
+          <textarea onChange={this.onChange} id='comment' name='comment' rows='10' cols='50' value={this.state.comment}></textarea><br/>
 
           <input type='submit' value='Envoyer'/>
         </form>
